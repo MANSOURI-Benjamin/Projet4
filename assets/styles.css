@@ -1,0 +1,691 @@
+
+header {
+    width: 100%;
+}
+
+.arrow {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h1 {
+    text-align: center;
+}
+
+.contenu {
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+i {
+    position: absolute;
+}
+
+.coeur-rempli {
+    opacity: 0;
+    transition: all;
+    transition-duration: 2s;
+}
+
+.coeur-rempli:hover {
+    opacity: 1;
+    color: #9356DC;
+}
+
+
+.title1 {
+    font-family: 'Shrikhand';
+    font-size: 40px;
+    text-align: left;
+    color: black;
+}
+
+ 
+.logo {
+    font-family: 'Shrikhand';
+    display: flex;
+    justify-content: center;    
+    margin-top: 15px;
+}
+
+.picture {
+    height:600px;
+    width:100%;
+    object-fit: cover;
+}
+
+
+body{
+    font-family: 'Roboto';
+}
+
+.chargement {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #f6b93b;
+    border-bottom: 10px solid #eb2f06;
+    border-left: 10px solid #0c2461;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 1.5s linear infinite ;
+    -o-animation: spin 1.5s linear infinite ;
+    animation: spin 1.5s linear infinite ;
+    margin: auto;
+    position: absolute;
+    top :0; left: 0; right: 0; bottom: 0;
+}
+
+@-webkit-keyframes spin {
+    0% {
+    -webkit-transform:rotate(0deg) ;
+    }
+    100% {
+    -webkit-transform:rotate(360deg) ;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+form {
+margin-top: 25px;
+}
+
+
+.menu-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+   
+.map {
+    background: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.soustitre {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.buttonrechercher {
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: white;
+    border: 1px solid #9356DC;
+    padding: 35px 38px;
+    border-radius: 40px;
+    font-weight: bold;
+    border: none;
+    font-size: 25px;
+    display: flex;
+}
+
+.bout {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+ol {
+list-style-type: none;
+}
+    
+
+@keyframes fadeIn {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+
+.menu-restaurant {
+    opacity: 1;
+    animation: fadeIn 40s ease;
+}
+
+.tuto_number {
+    font-size: 20px;
+}
+
+
+.tuto_circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #9356DC;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin-left: -30px;
+}
+
+.button:hover {
+    box-shadow: 10px 5px 5px black;
+    opacity: 1;
+    transition: 1s;
+}
+
+.buttonrechercher:hover {
+    box-shadow: 10px 5px 5px black;
+    opacity: 1;
+    transition: 1s;
+}
+
+ol .tdm {
+    display: flex;
+}
+
+.icone {
+    font-size: 20px;
+    color: #B197FC;
+    display: flex;
+    align-items: center;
+}
+    
+.iconelist {
+    font-size: 20px;
+    color:#767474;
+    display: flex;
+    align-items: center;
+}
+
+.iconephone {
+    font-size: 20px;
+    color: #767474;
+    display: flex;
+    align-items: center;
+}
+
+h6 {
+    position: absolute;
+    background-color: #99E2D0;
+    margin-left: 720px;
+    font-size: 20px;
+    margin-top: 15px;
+    color: green;
+    width: 100px;
+    text-align: center;
+}
+
+.title-image {
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav .button {
+    padding: 15px 18px;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 15px;
+    font-weight: bold;
+    display: flex;
+    width: 90%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    gap: 40px;
+    font-size: 24px;
+}
+
+.resto a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.resto {
+    width: 100%;
+}
+
+.resto img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.resto .card {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.resto-conteneur {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.heart {
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: -60px;
+    font-size: 30px;
+}
+
+
+.heart2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -60px;
+    font-size: 30px;
+}
+
+
+article .card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.information {
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.information ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 10px;
+    align-items: flex-start;
+}
+
+
+.titre-info {
+    color: white;
+    padding-top: 20px;
+    font-family: 'Shrikhand';
+    font-size: 20px;
+}
+
+.ohmy {
+    color: white;
+    font-family: 'Shrikhand';
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 4px;
+    padding-top: 20px;
+}
+
+.resto .card-subtitle {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.resto.card-text {
+    display: flex;
+}
+
+ul {
+ list-style-type: none;
+ margin-left: 15px;
+}
+
+.icn {
+    padding-right: 40px;
+}
+
+ 
+a {
+    text-decoration: none;
+}
+
+.contour {
+    border-radius: 50px 50px 0px 0px;
+    border: 2px solid white;
+    padding-top: 20px;
+    margin-top: -30px;
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+.recette {
+    border-bottom: #99E2D0 solid 4px;
+    margin-top: 60px;
+    width: 2.5%;
+}
+
+
+.fa-arrow-left:before {
+    color: black;
+    font-size: 30px;
+}
+
+.information a {
+    color: white;
+}
+
+.menu-restaurant {
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    overflow: hidden;
+    p {
+        margin-right: 10px;
+    }
+    &:hover {
+    .prix {
+        transform: translateX(0px);
+    }
+    .animation {
+        background-color: greenyellow;
+        .fa-circle-check {
+            transform: rotate(2turn);
+        }
+    }
+    }
+}
+
+
+.text-intitule {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.prix {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    transform: translateX(94px);
+    transition: all 0.4s;
+}
+
+
+.animation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 15px 15px 0px;
+    .fa-circle-check {
+        color: white;
+        font-size: 1.2em;
+        transition: all 3s;
+        }
+    }
+
+    .map i {
+        margin-left: -200px;
+    }
+
+
+@media (min-width: 1024px) {
+
+    .contenu {
+        margin-left: 5%;
+        margin-right: 5%;
+        }
+
+
+    .tdm {
+        display: inline-flex;
+        gap: 60px;
+        
+
+    }
+
+    .tdm .button {
+        height: 20px;
+        font-size: 11px;
+        width: 90%;
+    }
+
+    .icone{
+        font-size: 12px;
+    }
+
+
+    .tuto_circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #9356DC;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        margin-left: -30px;
+    }
+    
+    
+    .tuto_number {
+        font-size: 15px;
+    }
+
+    .buttonrechercher {
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: white;
+    border: 1px solid #9356DC;
+    padding: 25px 28px;
+    border-radius: 40px;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding-bottom: 30px;
+}
+
+.soustitre {
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.bout {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    margin-top: 70px;
+}
+
+h6 {
+    position: absolute;
+    background-color: #99E2D0;
+    margin-left: 750px;
+    font-size: 20px;
+    margin-top: 15px;
+    color: green;
+    width: 100px;
+    text-align: center;
+}
+
+
+.icn {
+    padding-right: 20px;
+}
+
+.heart2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -60px;
+    font-size: 30px;
+}
+
+.information ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-top: 90px;
+    align-items: flex-start;
+}
+
+
+.titre-info {
+    color: white;
+    font-family: 'Shrikhand';
+    font-size: 20px;
+    position: absolute;
+    margin-left: 750px;
+    margin-top: -25px;
+}
+
+
+.ohmy {
+    color: white;
+    font-family: 'Shrikhand';
+    font-size: 20px;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: -14px;
+}
+}
+
+
+
+@media (min-width: 1440px) {
+    .tdm {
+        display: inline-flex;
+        gap: 220px;
+        margin-left: 60px;
+    }
+
+
+    .tuto_circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #9356DC;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        margin-left: -30px;
+    }
+    
+    
+    .tuto_number {
+        font-size: 15px;
+    }
+
+    .resto-conteneur {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        margin-bottom: 40px;
+        align-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+.resto img {
+    width: 600px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 40px 40px 0px 0px;
+   }
+    
+
+    .contenu {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer.information {
+        background-color: black;
+        color: white;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+
+    .information ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: baseline;
+    }
+
+    .titre-info {
+        color: white;
+        font-family: 'Shrikhand';
+        font-size: 20px;
+        position: absolute;
+        margin-left: 950px;
+        margin-top: -26px;
+    }
+
+
+    .ohmy {
+        color: white;
+        font-family: 'Shrikhand';
+        font-size: 20px;
+        position: absolute;
+        margin-left: 1050px;
+        margin-top: -15px;
+    }
+
+    .resto a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    }
+
+    h6 {
+        position: absolute;
+        background-color: #99E2D0;
+        margin-left: 480px;
+        font-size: 20px;
+        margin-top: 15px;
+        color: green;
+        width: 100px;
+        text-align: center;
+    }
+
+h2{
+    margin-left: 100px;
+}
+
+
+}
