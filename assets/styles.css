@@ -1,31 +1,62 @@
+/*Voici mon code en first-mobile*/
 
 header {
     width: 100%;
 }
 
-.arrow {
+body {
+    margin: 5%;
+    font-family: 'Roboto';
     display: flex;
-    flex-direction: column-reverse;
-}
-
-h1 {
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0px;
 }
 
 .contenu {
-    margin-left: 5%;
-    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
 
+.paragraphe-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cherche {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 28px;
+        flex-wrap: nowrap;
+        margin-top: -10px;
+    }
+
+h1 {
+    text-align: center;
+    font-size: 75px;
 }
 
 i {
     position: absolute;
 }
 
+/*Ceci est l'animation du coeur */
+
 .coeur-rempli {
     opacity: 0;
     transition: all;
     transition-duration: 2s;
+    color:#FF79DA
 }
 
 .coeur-rempli:hover {
@@ -36,28 +67,36 @@ i {
 
 .title1 {
     font-family: 'Shrikhand';
-    font-size: 40px;
+    font-size: 60px;
     text-align: left;
     color: black;
+    margin-left: 10%;
+    margin-top: 15px;
 }
-
  
 .logo {
-    font-family: 'Shrikhand';
-    display: flex;
-    justify-content: center;    
-    margin-top: 15px;
+        font-family: 'Shrikhand';
+        display: flex;
+        justify-content: center;
+        margin-top: 38px;
 }
 
 .picture {
-    height:600px;
-    width:100%;
+    height: 510px;
+    width: 100%;
     object-fit: cover;
 }
 
+/*Voici le code concernant mon animation sur le loader */
 
-body{
-    font-family: 'Roboto';
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
 }
 
 .chargement {
@@ -68,38 +107,47 @@ body{
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    -webkit-animation: spin 1.5s linear infinite ;
-    -o-animation: spin 1.5s linear infinite ;
-    animation: spin 1.5s linear infinite ;
+    animation: spin 1.5s linear infinite, fadeOut 1s linear 5s forwards;
     margin: auto;
-    position: absolute;
-    top :0; left: 0; right: 0; bottom: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
-
-@-webkit-keyframes spin {
-    0% {
-    -webkit-transform:rotate(0deg) ;
-    }
-    100% {
-    -webkit-transform:rotate(360deg) ;
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-
-}
-
 
 form {
 margin-top: 25px;
 }
 
+input {
+    border: none;
+    text-align: center;
+    background-color: #F2F2F2;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.map {
+    background-color: #F2F2F2;
+    border-top: 2px solid black;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.map i {
+    margin-left: -278px;
+    font-size: 28px;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+}
 
 .menu-restaurant {
     display: flex;
@@ -107,62 +155,63 @@ margin-top: 25px;
     align-items: center;
 }
 
-   
-.map {
-    background: #F2F2F2;
-    border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
-    padding: 15px 15px;
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-input {
-    border: none;
-    text-align: center;
-    font-size: 20px;
-}
-
 .soustitre {
     text-align: center;
-    font-size: 25px;
-    padding-bottom: 20px;
+    font-size: 39px;
+    margin-top: -10px;
 }
 
 .buttonrechercher {
     background: linear-gradient(#9356DC, #FF79DA);
     color: white;
-    border: 1px solid #9356DC;
-    padding: 35px 38px;
+    padding: 35px;
     border-radius: 40px;
     font-weight: bold;
     border: none;
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
+    margin-bottom: 80px;
+    width: 36%;
+    justify-content: center;
+    height: 68px;
+    align-items: center;
+    margin-top: -10px;
 }
 
-.bout {
+.boutton-1 {
     display: flex;
     justify-content: center;
     margin-top: 60px;
+}
+
+.titre2 {
+    font-size: 40px;
 }
 
 ol {
 list-style-type: none;
 }
     
+/*Ceci est l'animation pour faire apparaître les différentes parties du menu petit à petit */
 
 @keyframes fadeIn {
     from { opacity: 0; } 
     to { opacity: 1; }
 }
 
-.menu-restaurant {
+.debut {
     opacity: 1;
-    animation: fadeIn 40s ease;
+    animation: fadeIn 5s ease;
+}
+
+.milieu {
+    opacity: 1;
+    animation: fadeIn 10s ease;
+}
+
+.fin {
+    opacity: 1;
+    animation:fadeIn 15s ease;
 }
 
 .tuto_number {
@@ -193,44 +242,44 @@ list-style-type: none;
     transition: 1s;
 }
 
-ol .tdm {
-    display: flex;
-}
-
 .icone {
-    font-size: 20px;
+    font-size: 40px;
     color: #B197FC;
     display: flex;
     align-items: center;
 }
     
 .iconelist {
-    font-size: 20px;
+    font-size: 40px;
     color:#767474;
     display: flex;
     align-items: center;
 }
 
 .iconephone {
-    font-size: 20px;
+    font-size: 40px;
     color: #767474;
     display: flex;
     align-items: center;
 }
 
 h6 {
-    position: absolute;
-    background-color: #99E2D0;
-    margin-left: 720px;
-    font-size: 20px;
-    margin-top: 15px;
-    color: green;
-    width: 100px;
-    text-align: center;
-}
+        position: absolute;
+        background-color: #99E2D0;
+        font-size: 20px;
+        margin-top: 15px;
+        color: green;
+        width: 100px;
+        margin-left: 75%;
+        text-align: center;
+    }
 
 .title-image {
     color: white;
+}
+
+nav {
+    width: 100%;
 }
 
 nav a {
@@ -238,19 +287,16 @@ nav a {
 }
 
 nav .button {
-    padding: 15px 18px;
     color: black;
     border: 1px solid grey;
     border-radius: 15px;
     font-weight: bold;
     display: flex;
-    width: 90%;
-    margin-top:20px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    justify-content: flex-start;
+    height: 70px;
+    gap: 180px;
     align-items: center;
-    height: 40px;
-    gap: 40px;
     font-size: 24px;
 }
 
@@ -267,7 +313,7 @@ nav .button {
 
 .resto img {
     width: 100%;
-    height: 450px;
+    height: 350px;
     object-fit: cover;
     border-radius: 40px 40px 0px 0px;
 }
@@ -288,11 +334,12 @@ nav .button {
 }
 
 .heart {
-    display:flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    margin-top: -60px;
-    font-size: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -60px;
+        font-size: 40px;
+        align-items: center;
+        margin-left: 70%;
 }
 
 
@@ -301,10 +348,10 @@ nav .button {
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
-    margin-top: -60px;
-    font-size: 30px;
+    margin-top: -96px;
+    font-size: 51px;
+    margin-right: 10%;
 }
-
 
 article .card-content {
     display: flex;
@@ -312,41 +359,53 @@ article .card-content {
 }
 
 
-.information {
-    background-color: black;
-    color: white;
-    margin-top: 30px;
-    width: 100%;
-}
+.footer__container {
+    background-color: #353535;
+  }
 
-.information ul {
+  .footer__container p {
+    padding-left: 22px;
+    padding-top: 25px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Shrikhand", sans-serif;
+    margin: 0;
+  }
+
+  .footer__container__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    padding-left: 10px;
-    align-items: flex-start;
-}
+    gap: 16px;
+    padding: 22px 25px 22px 25px;
+    margin: 0;
+    list-style: none;
+  }
 
-
-.titre-info {
+  .footer__container__list a {
     color: white;
-    padding-top: 20px;
-    font-family: 'Shrikhand';
-    font-size: 20px;
-}
+  }
 
-.ohmy {
-    color: white;
-    font-family: 'Shrikhand';
-    font-size: 20px;
-    margin-left: 25px;
-    margin-top: 4px;
-    padding-top: 20px;
-}
+  .footer__container__list a i {
+    width: 11px;
+    height: 13px;
+    padding-right: 20px;
+  }
+
+    footer{
+        margin-top: 40px;
+    }
+
+    footer li span{
+    margin-left: 18px;
+    }
+
+    .icone_footer {
+        margin-left: -10px;
+    }
+
 
 .resto .card-subtitle {
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 
@@ -359,68 +418,73 @@ ul {
  margin-left: 15px;
 }
 
-.icn {
-    padding-right: 40px;
-}
-
- 
 a {
     text-decoration: none;
 }
 
 .contour {
-    border-radius: 50px 50px 0px 0px;
-    border: 2px solid white;
-    padding-top: 20px;
-    margin-top: -30px;
-    position: relative;
-    width: 100%;
-    background-color: white;
-}
+        border-radius: 50px 50px 0px 0px;
+        border: 2px solid white;
+        padding-top: 20px;
+        margin-top: -58px;
+        position: relative;
+        width: 100%;
+        background-color: white;
+    }
 
 .recette {
-    border-bottom: #99E2D0 solid 4px;
-    margin-top: 60px;
-    width: 2.5%;
+        border-bottom: #99E2D0 solid 4px;
+        margin-top: 130px;
+        width: 6.5%;
+        font-size: 35px;
+        font-weight: 300;
 }
 
+h5 {
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.tarif {
+    font-size: 25px;
+    margin-left: -20px;
+}
 
 .fa-arrow-left:before {
     color: black;
     font-size: 30px;
 }
-
-.information a {
-    color: white;
-}
+/* Cette partie là concerne l'animation de mes prix */
 
 .menu-restaurant {
-    height: 100px;
+    height: 90px;
     width: 100%;
     border-radius: 15px;
     border: 2px solid black;
     margin-bottom: 15px;
     overflow: hidden;
+    transition: background-color 0.5s, transform 0.5s;
+
     p {
         margin-right: 10px;
     }
+
     &:hover {
-    .prix {
-        transform: translateX(0px);
-    }
-    .animation {
-        background-color: #99E2D0;
-        .fa-circle-check {
-            transform: rotate(2turn);
+        .prix {
+            transform: translateX(0px);
+            transition: transform 0.5s;
+        }
+
+        .animation {
+            background-color: #99E2D0;
+            transition: background-color 0.5s;
+
+            .fa-circle-check {
+                transform: rotate(2turn);
+                transition: transform 0.5s;
+            }
         }
     }
-    }
-}
-
-
-.text-intitule {
-    height: 100%;
-    border-radius: 15px;
 }
 
 .prix {
@@ -432,6 +496,16 @@ a {
     transition: all 0.4s;
 }
 
+.text-intitule {
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -32px;
+    font-size: 24px;
+    margin-left: 15px;
+}
 
 .animation {
     width: 100%;
@@ -448,244 +522,331 @@ a {
         }
     }
 
-    .map i {
-        margin-left: -200px;
+    .bouton-2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
     }
 
+    /* Voici la partie du code qui concerne ma version tablette */
 
-@media (min-width: 1024px) {
+    @media (max-width: 768px) {
 
-    .contenu {
-        margin-left: 5%;
-        margin-right: 5%;
+          .heart2 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row;
+            margin-top: -96px;
+            font-size: 51px;
+            margin-right: 11%;
         }
 
+        .footer__container {
+            background-color: #353535;
+          }
+    
+          .footer__container p {
+            padding-left: 22px;
+            padding-top: 25px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-family: "Shrikhand", sans-serif;
+            margin: 0;
+          }
+    
+          .footer__container__list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 22px 25px 22px 25px;
+            margin: 0;
+            list-style: none;
+          }
+    
+          .footer__container__list a {
+            color: white;
+          }
+    
+          .footer__container__list a i {
+            width: 11px;
+            height: 13px;
+            padding-right: 20px;
+          }
+    
+            footer{
+                margin-top: 40px;
+            }
+    
+            footer li span{
+            margin-left: 18px;
+            }
+    
+            .icone_footer {
+                margin-left: 10px;
+            }
+    }
 
-    .tdm {
-        display: inline-flex;
-        gap: 60px;
+    
+
+    /* Voici la dernière partie du code qui concerne ma version desktop*/
+
+    @media (min-width: 1024px) {
         
+        body {
+        font-family: 'Roboto';
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        }
 
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .soustitre {
+            text-align: center;
+            font-size: 20px;
+            margin-top: -10px;
+            font-weight: 300;
+        }
+
+        .map {
+         border: none;
+        }
+
+        .buttonrechercher {
+        background: linear-gradient(#FF79DA, #9356DC);
+        color: white;
+        padding: 16px;
+        font-weight: bold;
+        border: none;
+        font-size: 17px;
+        display: flex;
+        margin-bottom: 80px;
+        width: 238px;
+        justify-content: center;
+        align-items: center;
+        height: 54px;
     }
 
-    .tdm .button {
-        height: 20px;
-        font-size: 11px;
-        width: 90%;
-    }
+        h6 {
+        position: absolute;
+        background-color: #99E2D0;
+        font-size: 13px;
+        color: green;
+        width: 6%;
+        margin-left: 30%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        }
 
-    .icone{
-        font-size: 12px;
-    }
-
-
-    .tuto_circle {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #9356DC;
-        color: #fff;
-        text-align: center;
-        line-height: 30px;
-        margin-left: -30px;
-    }
-    
-    
-    .tuto_number {
-        font-size: 15px;
-    }
-
-    .buttonrechercher {
-    background: linear-gradient(#9356DC, #FF79DA);
-    color: white;
-    border: 1px solid #9356DC;
-    padding: 25px 28px;
-    border-radius: 40px;
-    font-weight: bold;
-    border: none;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    padding-bottom: 30px;
-}
-
-.soustitre {
-    text-align: center;
-    padding-bottom: 0px;
-}
-
-.bout {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 60px;
-    margin-top: 70px;
-}
-
-h6 {
-    position: absolute;
-    background-color: #99E2D0;
-    margin-left: 750px;
-    font-size: 20px;
-    margin-top: 15px;
-    color: green;
-    width: 100px;
-    text-align: center;
-}
-
-
-.icn {
-    padding-right: 20px;
-}
-
-.heart2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin-top: -60px;
-    font-size: 30px;
-}
-
-.information ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    padding-top: 10px;
-    padding-left: 10px;
-    margin-top: 90px;
-    align-items: flex-start;
-}
-
-
-.titre-info {
-    color: white;
-    font-family: 'Shrikhand';
-    font-size: 20px;
-    position: absolute;
-    margin-left: 750px;
-    margin-top: -25px;
-}
-
-
-.ohmy {
-    color: white;
-    font-family: 'Shrikhand';
-    font-size: 20px;
-    position: absolute;
-    margin-left: 850px;
-    margin-top: -14px;
-}
-}
-
-
-
-@media (min-width: 1440px) {
-    .tdm {
-        display: inline-flex;
-        gap: 220px;
-        margin-left: 60px;
-    }
-
-
-    .tuto_circle {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #9356DC;
-        color: #fff;
-        text-align: center;
-        line-height: 30px;
-        margin-left: -30px;
-    }
-    
-    
-    .tuto_number {
-        font-size: 15px;
-    }
-
-    .resto-conteneur {
+        .resto-conteneur {
         width: 100%;
         display: flex;
-        gap: 50px;
-        margin-bottom: 40px;
+        gap: 92px;
         align-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-    }
+        margin-bottom: 20px;
+        justify-content: space-between;
+        margin-top: 30px;
+        }
 
-.resto img {
-    width: 600px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 40px 40px 0px 0px;
-   }
+        .resto {
+            width: 100%;
+            }
+
+    
+        .resto img {
+                width: 100%;
+                height: 191px;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+            }
     
 
-    .contenu {
-        width: 100%;
-        max-width: 1440px;
-        margin-left: 0;
-        margin-right: 0;
-    }
+        .resto .card-subtitle {
+                margin-top: -15px;
+                margin-bottom: 50px;
+                }  
+                
+        .recette {
+                border-bottom: #99E2D0 solid 4px;
+                margin-top: 70px;
+                width: 6.5%;
+                font-size: 30px;
+                font-weight: 300;
+                }
 
-    footer.information {
-        background-color: black;
-        color: white;
-        margin-top: 30px;
-        width: 100%;
-    }
+        .menu-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 56px
+            }
+
+        nav .button {
+            padding: 15px 18px;
+            color: black;
+            border: 1px solid grey;
+            border-radius: 15px;
+            font-weight: bold;
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            height: 15px;
+            gap: 40px;
+            font-size: 14px;
+            margin-left: -30px;
+            }
+
+        .icone {
+            font-size: 23px;
+            color: #B197FC;
+            display: flex;
+            align-items: center;
+            }
+        
+        .iconelist {
+            font-size: 23px;
+            color: #767474;
+            display: flex;
+            align-items: center;
+            }
+
+        .iconephone {
+            font-size: 23px;
+            color: #767474;
+            display: flex;
+            align-items: center;
+            }   
+
+        .contenu {
+            margin-left: 0;
+            margin-right: 0;
+            }
+
+        .icn {
+                padding-right: 30px;
+            }    
+
+        .card-content {
+            width:45%
+            }
+
+        .heart {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: -60px;
+            font-size: 27px;
+            align-items: center;
+            margin-left: 70%;
+        }
 
 
-    .information ul {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-items: baseline;
-    }
+        .picture {
+            height: 414px;
+            width: 100%;
+            object-fit: cover;
+            }    
 
-    .titre-info {
-        color: white;
-        font-family: 'Shrikhand';
-        font-size: 20px;
-        position: absolute;
-        margin-left: 950px;
-        margin-top: -26px;
-    }
+        h5 {
+            font-size: 25px;
+            }   
 
+        .menu-restaurant {
+            height: 75px;
+            width: 100%;
+            border-radius: 15px;
+             border: 2px solid black;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: background-color 0.5s, transform 0.5s;
+            }
 
-    .ohmy {
-        color: white;
-        font-family: 'Shrikhand';
-        font-size: 20px;
-        position: absolute;
-        margin-left: 1050px;
-        margin-top: -15px;
-    }
+            .text-intitule {
+                height: 100%;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                margin-top: -17px;
+                margin-left: 15px;
+                justify-content: center;
+            }
 
-    .resto a {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    }
+            p {
+                margin-right: 10px;
+                margin-top: 8px;
+            }
 
-    h6 {
-        position: absolute;
-        background-color: #99E2D0;
-        margin-left: 480px;
-        font-size: 20px;
-        margin-top: 15px;
-        color: green;
-        width: 100px;
-        text-align: center;
-    }
-
-h2{
-    margin-left: 100px;
-}
+            .tarif {
+                font-size: 15px;
+                margin-left: -20px;
+                margin-top: 36px;
+            }
 
 
-}
+            .contour {
+                border-radius: 50px 50px 0px 0px;
+                border: 2px solid white;
+                padding-top: 20px;
+                margin-top: -40px;
+                position: relative;
+                width: 76%;
+                background-color: white;
+                display: flex;
+                align-items: stretch;
+                margin-left: 10%;
+                flex-direction: column;
+            }
+
+            .picture {
+                height: 414px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .title1 {
+            font-family: 'Shrikhand';
+            font-size: 40px;
+            text-align: left;
+            color: black;
+            margin-left: 16%;
+            margin-top: 54px;
+            }
+
+            .heart2 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: row;
+                margin-top: -73px;
+                font-size: 40px;
+            }
+
+            .footer__container {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 30px 25px 30px 25px;
+                padding-top: 40px;
+                align-items: flex-end;
+             }
+    
+              .footer__container p {
+                padding: 0;
+              }
+              
+              .footer__container .footer__container__list {
+                flex-direction: row;
+                padding: 0;
+                margin-right: 100px;
+              }
+
+            }
