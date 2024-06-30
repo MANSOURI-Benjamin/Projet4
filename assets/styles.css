@@ -5,12 +5,13 @@ header {
 }
 
 body {
-    margin: 5%;
+
     font-family: 'Roboto';
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 0px;
+    background-color: #f6f6f6;;
 }
 
 .contenu {
@@ -25,6 +26,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f3f3f3;
+
 }
 
 .cherche {
@@ -43,7 +46,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 75px;
+    font-size: 55px;
 }
 
 i {
@@ -111,7 +114,7 @@ i {
     margin: auto;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
@@ -123,13 +126,13 @@ margin-top: 25px;
 input {
     border: none;
     text-align: center;
-    background-color: #F2F2F2;
+    background-color: #EAEAEA;
     font-weight: bold;
     font-size: 26px;
 }
 
 .map {
-    background-color: #F2F2F2;
+    background-color: #EAEAEA;
     border-top: 2px solid black;
     height: 75px;
     display: flex;
@@ -147,6 +150,7 @@ input {
 .menu-nav {
     display: flex;
     flex-direction: column;
+    margin-left: -26px;
 }
 
 .menu-restaurant {
@@ -157,23 +161,23 @@ input {
 
 .soustitre {
     text-align: center;
-    font-size: 39px;
+    font-size: 35px;
     margin-top: -10px;
 }
 
 .buttonrechercher {
     background: linear-gradient(#9356DC, #FF79DA);
     color: white;
-    padding: 35px;
-    border-radius: 40px;
+    padding: 45px;
+    border-radius: 60px;
     font-weight: bold;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     margin-bottom: 80px;
-    width: 36%;
+    width: 431px;
     justify-content: center;
-    height: 68px;
+    height: 105px;
     align-items: center;
     margin-top: -10px;
 }
@@ -185,7 +189,11 @@ input {
 }
 
 .titre2 {
-    font-size: 40px;
+    font-size: 35px;
+}
+
+.card-title {
+    font-size: 30px;
 }
 
 ol {
@@ -226,8 +234,8 @@ list-style-type: none;
     background-color: #9356DC;
     color: #fff;
     text-align: center;
-    line-height: 30px;
-    margin-left: -30px;
+    line-height: 22px;
+    margin-left: -12px;
 }
 
 .button:hover {
@@ -280,6 +288,8 @@ h6 {
 
 nav {
     width: 100%;
+    background-color:#FFFFFF;
+
 }
 
 nav a {
@@ -288,16 +298,19 @@ nav a {
 
 nav .button {
     color: black;
-    border: 1px solid grey;
     border-radius: 15px;
     font-weight: bold;
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 70px;
+    height: 90px;
     gap: 180px;
     align-items: center;
-    font-size: 24px;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 1);
+    width: 98%;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+
 }
 
 .resto a {
@@ -365,9 +378,9 @@ article .card-content {
 
   .footer__container p {
     padding-left: 22px;
-    padding-top: 25px;
+    padding-top: 20px;
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 25px;
     font-family: "Shrikhand", sans-serif;
     margin: 0;
   }
@@ -379,7 +392,8 @@ article .card-content {
     padding: 22px 25px 22px 25px;
     margin: 0;
     list-style: none;
-  }
+    font-size: 20px;
+}
 
   .footer__container__list a {
     color: white;
@@ -396,17 +410,18 @@ article .card-content {
     }
 
     footer li span{
-    margin-left: 18px;
+    margin-left: 50px;
     }
 
     .icone_footer {
-        margin-left: -10px;
+        margin-left: -3px;
     }
 
 
 .resto .card-subtitle {
     margin-top: 0px;
     margin-bottom: 50px;
+    font-size: 25px;
 }
 
 .resto.card-text {
@@ -429,7 +444,8 @@ a {
         margin-top: -58px;
         position: relative;
         width: 100%;
-        background-color: white;
+        background-color:#F6F6F6;
+
     }
 
 .recette {
@@ -457,16 +473,17 @@ h5 {
 /* Cette partie là concerne l'animation de mes prix */
 
 .menu-restaurant {
-    height: 90px;
-    width: 100%;
-    border-radius: 15px;
-    border: 2px solid black;
+    height: 150px;
+    width: 98%;
+    border-radius: 25px;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     overflow: hidden;
     transition: background-color 0.5s, transform 0.5s;
-
+    background: rgba(255, 255, 255, 1);
     p {
         margin-right: 10px;
+        font-size: 20px;
     }
 
     &:hover {
@@ -481,7 +498,7 @@ h5 {
 
             .fa-circle-check {
                 transform: rotate(2turn);
-                transition: transform 0.5s;
+                transition: transform 1s;
             }
         }
     }
@@ -523,9 +540,10 @@ h5 {
     }
 
     .bouton-2 {
-        display: flex;
-        justify-content: center;
         margin-top: 80px;
+        margin-top: 100px;
+        width: 386px;
+        margin-left: 30%;
     }
 
     /* Voici la partie du code qui concerne ma version tablette */
@@ -541,6 +559,24 @@ h5 {
             font-size: 51px;
             margin-right: 11%;
         }
+
+        .buttonrechercher {
+            background: linear-gradient(#9356DC, #FF79DA);
+            color: white;
+            padding: 35px;
+            border-radius: 45px;
+            font-weight: bold;
+            border: none;
+            font-size: 25px;
+            display: flex;
+            margin-bottom: 80px;
+            width: 100%;
+            justify-content: center;
+            height: 93px;
+            align-items: center;
+            margin-top: -10px;
+        }
+
 
         .footer__container {
             background-color: #353535;
@@ -584,6 +620,13 @@ h5 {
     
             .icone_footer {
                 margin-left: 10px;
+            }
+
+            .bouton-2 {
+                margin-top: 80px;
+                margin-top: 100px;
+                width: 386px;
+                margin-left: 28%;
             }
     }
 
@@ -676,35 +719,18 @@ h5 {
                 }  
                 
         .recette {
-                border-bottom: #99E2D0 solid 4px;
-                margin-top: 70px;
-                width: 6.5%;
-                font-size: 30px;
-                font-weight: 300;
-                }
+            border-bottom: #99E2D0 solid 4px;
+            margin-top: 70px;
+            width: 6.5%;
+            font-size: 25px;
+            font-weight: 300;
+            }
 
         .menu-nav {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin-bottom: 56px
-            }
-
-        nav .button {
-            padding: 15px 18px;
-            color: black;
-            border: 1px solid grey;
-            border-radius: 15px;
-            font-weight: bold;
-            display: flex;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            justify-content: flex-start;
-            align-items: center;
-            height: 15px;
-            gap: 40px;
-            font-size: 14px;
-            margin-left: -30px;
             }
 
         .icone {
@@ -761,14 +787,15 @@ h5 {
             font-size: 25px;
             }   
 
-        .menu-restaurant {
-            height: 75px;
-            width: 100%;
-            border-radius: 15px;
-             border: 2px solid black;
-            margin-bottom: 15px;
-            overflow: hidden;
-            transition: background-color 0.5s, transform 0.5s;
+            .menu-restaurant {
+                height: 94px;
+                width: 98%;
+                border-radius: 25px;
+                box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+                margin-bottom: 15px;
+                overflow: hidden;
+                transition: background-color 0.5s, transform 0.5s;
+                background: rgba(255, 255, 255, 1);
             }
 
             .text-intitule {
@@ -847,6 +874,91 @@ h5 {
                 flex-direction: row;
                 padding: 0;
                 margin-right: 100px;
+                font-size: 16px;
               }
 
+
+              .menu-nav {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 56px;
+                align-items: center;
+            }
+
+            nav .button {
+                color: black;
+                border-radius: 15px;
+                font-weight: bold;
+                display: flex;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                height: 55px;
+                gap: 69px;
+                font-size: 13px;
+                background: rgba(255, 255, 255, 1);
+                width: 319px;
+                box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+                flex-direction: row;
+            }
+
+        .tuto_circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #9356DC;
+            color: #fff;
+            text-align: center;
+            line-height: 29px;
+            margin-left: -12px;
+        }
+            
+        .card-title {
+            font-size: 20px;
+        }
+
+        .resto .card-subtitle {
+            margin-top: -15px;
+            margin-bottom: 50px;
+            font-size: 15px;
+        }
+
+        h6 {
+            position: absolute;
+            background-color: #99E2D0;
+            font-size: 13px;
+            color: green;
+            width: 6%;
+            margin-left: 36%;
+            height: 33px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            border: none;
+            text-align: center;
+            background-color: #EAEAEA;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .map i {
+            margin-left: -278px;
+            font-size: 25px;
+            margin-top: -10px;
+        }
+        
+        .map {
+            background-color: #EAEAEA;
+            border-top: 2px solid black;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+        }
+        
             }
